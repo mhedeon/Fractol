@@ -21,6 +21,8 @@ Usage:
 Controls:
 
 ```
+Help menu: H [on/off]
+
 Move: W, A, S, D
 
 Zoom: MOUSE WHEEL
