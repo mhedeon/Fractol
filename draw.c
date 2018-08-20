@@ -6,7 +6,7 @@
 /*   By: mhedeon <mhedeon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/07 17:23:47 by mhedeon           #+#    #+#             */
-/*   Updated: 2018/08/20 17:39:33 by mhedeon          ###   ########.fr       */
+/*   Updated: 2018/08/20 17:58:55 by mhedeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,11 +75,15 @@ void		window(char *win_name)
 void		help(t_mlx *mlx)
 {
 	mlx_string_put(mlx->mlx_ptr, mlx->win_ptr,
-					30, 390, 0x00f900, "Move: W: A, S, D");
+					30, 330, 0x00f900, "Move: W: A, S, D");
 	mlx_string_put(mlx->mlx_ptr, mlx->win_ptr,
-					30, 420, 0x00f900, "Zoom: MOUSE WHEEL");
+					30, 360, 0x00f900, "Zoom: MOUSE WHEEL");
 	mlx_string_put(mlx->mlx_ptr, mlx->win_ptr,
-					30, 450, 0x00f900, "Change color: ARROWS");
+					30, 390, 0x00f900, "Change color: ARROWS");
+	mlx_string_put(mlx->mlx_ptr, mlx->win_ptr,
+					30, 420, 0x00f900, "Reset: R");
+	mlx_string_put(mlx->mlx_ptr, mlx->win_ptr,
+					30, 450, 0x00f900, "Iterations: +, -");
 	mlx_string_put(mlx->mlx_ptr, mlx->win_ptr,
 					30, 480, 0x00f900, "Interactive mode: SPACE [on/off]");
 	mlx_string_put(mlx->mlx_ptr, mlx->win_ptr,

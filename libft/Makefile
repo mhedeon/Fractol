@@ -1,14 +1,14 @@
-#******************************************************************************#
+# **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mhedecn <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: mhedeon <mhedeon@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/25 16:53:51 by mhedeon           #+#    #+#              #
-#    Updated: 2018/03/25 16:53:51 by mhedeon          ###   ########.fr        #
+#    Updated: 2018/08/20 19:38:18 by mhedeon          ###   ########.fr        #
 #                                                                              #
-#******************************************************************************#
+# **************************************************************************** #
 
 NAME = libft.a
 
@@ -55,16 +55,16 @@ FLAGS = -Wall -Wextra -Werror
 all : $(NAME)
 
 $(NAME) : $(SRCO)
-	@ar rc libft.a $(SRCO)
-	@ranlib libft.a
+	ar rc libft.a $(SRCO)
+	ranlib libft.a
 
 %.o : %.c
-	@gcc $(FLAGS) -c $< -I $@
+	gcc $(FLAGS) -c $< -I $@
 
 clean:
-	@rm -f $(SRCO)
+	rm -f $(SRCO)
 
 fclean: clean
-	@rm -f libft.a
+	rm -f libft.a
 
 re: fclean all

@@ -6,7 +6,7 @@
 /*   By: mhedeon <mhedeon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/07 16:24:47 by mhedeon           #+#    #+#             */
-/*   Updated: 2018/08/20 17:34:08 by mhedeon          ###   ########.fr       */
+/*   Updated: 2018/08/20 21:22:43 by mhedeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,15 +48,11 @@ int		deal_mouse_mm(int key, int x, int y)
 
 int		deal_key(int key, t_mlx *mlx)
 {
-	if (key == KEY_ESC)
-	{
-		destroy_window(mlx);
-		return (1);
-	}
 	if (key == KEY_PLUS)
 		mlx->fract->max_itter += 100;
 	else if (key == KEY_MINUS)
-		mlx->fract->max_itter -= 100;
+		mlx->fract->max_itter = (mlx->fract->max_itter - 100) < 60 ?
+		mlx->fract->max_itter : mlx->fract->max_itter - 100;
 	else if (key == KEY_SPACE)
 		mlx->fract->j_move *= -1;
 	else if (key == KEY_H)
@@ -72,6 +68,8 @@ int		deal_key(int key, t_mlx *mlx)
 		move_fract(key, mlx->fract);
 	ft_bzero((void *)mlx->img->img, mlx->img->size * WIN_HEIGHT);
 	draw_fract(mlx);
+	if (key == KEY_ESC)
+		destroy_window(mlx);
 	return (1);
 }
 
@@ -79,12 +77,16 @@ int		deal_mouse(int key, int x, int y, t_mlx *mlx)
 {
 	if (key == WHEEL_DOWN)
 	{
-		mlx->fract->max_itter -= 1;
+		if (mlx->fract->delta_re < mlx->fract->ds_re ||
+			mlx->fract->delta_im < mlx->fract->ds_im)
+			mlx->fract->max_itter -= 1;
 		good_zoom(mlx->fract, 0.93, x, WIN_HEIGHT - y);
 	}
 	else if (key == WHEEL_UP)
 	{
-		mlx->fract->max_itter += 1;
+		if (mlx->fract->delta_re < mlx->fract->ds_re ||
+			mlx->fract->delta_im < mlx->fract->ds_im)
+			mlx->fract->max_itter += 1;
 		good_zoom(mlx->fract, 1.07, x, WIN_HEIGHT - y);
 	}
 	ft_bzero((void *)mlx->img->img, mlx->img->size * WIN_HEIGHT);
