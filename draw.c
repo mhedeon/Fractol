@@ -6,7 +6,7 @@
 /*   By: mhedeon <mhedeon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/07 17:23:47 by mhedeon           #+#    #+#             */
-/*   Updated: 2018/08/20 17:58:55 by mhedeon          ###   ########.fr       */
+/*   Updated: 2018/08/22 18:17:14 by mhedeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void		window(char *win_name)
 void		help(t_mlx *mlx)
 {
 	mlx_string_put(mlx->mlx_ptr, mlx->win_ptr,
-					30, 330, 0x00f900, "Move: W: A, S, D");
+					30, 330, 0x00f900, "Move: W, A, S, D");
 	mlx_string_put(mlx->mlx_ptr, mlx->win_ptr,
 					30, 360, 0x00f900, "Zoom: MOUSE WHEEL");
 	mlx_string_put(mlx->mlx_ptr, mlx->win_ptr,
