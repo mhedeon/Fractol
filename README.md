@@ -4,7 +4,7 @@
 
 Download:
 
-    git clone https://github.com/maksged/fractol.git
+    git clone https://github.com/mhedeon/Fractol.git
 
 Compile:
 
@@ -43,10 +43,10 @@ Exit: ESc
 
 How it looks:
 ![menu](https://github.com/maksged/fractol/blob/master/Img/menu.png)
-![1](https://github.com/maksged/fractol/blob/master/Img/1.png)
-![2](https://github.com/maksged/fractol/blob/master/Img/2.png)
-![3](https://github.com/maksged/fractol/blob/master/Img/3.png)
-![4](https://github.com/maksged/fractol/blob/master/Img/4.png)
-![5](https://github.com/maksged/fractol/blob/master/Img/5.png)
-![6](https://github.com/maksged/fractol/blob/master/Img/6.png)
-![7](https://github.com/maksged/fractol/blob/master/Img/7.png)
+![1](https://github.com/mhedeon/Fractol/blob/master/Img/1.png)
+![2](https://github.com/mhedeon/Fractol/blob/master/Img/2.png)
+![3](https://github.com/mhedeon/Fractol/blob/master/Img/3.png)
+![4](https://github.com/mhedeon/Fractol/blob/master/Img/4.png)
+![5](https://github.com/mhedeon/Fractol/blob/master/Img/5.png)
+![6](https://github.com/mhedeon/Fractol/blob/master/Img/6.png)
+![7](https://github.com/mhedeon/Fractol/blob/master/Img/7.png)
