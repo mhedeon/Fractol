@@ -42,7 +42,7 @@ Exit: ESc
 ```
 
 How it looks:
-![menu](https://github.com/maksged/fractol/blob/master/Img/menu.png)
+![menu](https://github.com/mhedeon/fractol/blob/master/Img/menu.png)
 ![1](https://github.com/mhedeon/Fractol/blob/master/Img/1.png)
 ![2](https://github.com/mhedeon/Fractol/blob/master/Img/2.png)
 ![3](https://github.com/mhedeon/Fractol/blob/master/Img/3.png)
